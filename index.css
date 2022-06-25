@@ -1,0 +1,22 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh
+
+
+}
+
+div {
+    width: 40%;
+    aspect-ratio: 2/1;
+    background-color: black;
+    border-radius: 20%;
+}
