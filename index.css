@@ -1,3 +1,20 @@
+/*
+PALETA DE CORES:
+#142039; Azul mais escuro
+#29293c; Azul mais claro e mais roxo
+
+
+*/
+:root {
+
+    --noite1: #142039;
+    --noite2: #29293c;
+
+
+
+}
+
+
 * {
     border: 0;
     margin: 0;
@@ -9,14 +26,32 @@ body {
     display:flex;
     justify-content: center;
     align-items:center;
-    min-height: 100vh
+    min-height: 100vh;
+    /*transition: 0.5s;*/
+    background-color: #29293c;
 
 
 }
 
 div {
+    position:relative;
     width: 40%;
     aspect-ratio: 2/1;
-    background-color: black;
-    border-radius: 20%;
+    background-color: #142039;
+    border-radius: calc(20vw);
+    /*border-radius deve ser igual a altura*/
+    /* a border radius tem uma valor maximo (；ﾟ Дﾟ)*/
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                inset 0 8px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.1);
+                /*Dessa eu não sabia XD
+                O inset coloca a sombra pra dentro*/
+}
+
+#interruptor .indicator {
+    aspect-ratio: 1/1;
+    height: 100%;
+    background-color: red;
+
 }
