@@ -10,3 +10,9 @@ div {
 }
 
 ``````
+
+CONCEITOS UTILIZADOS NO PROJETO PARA ESTUDO MAIS TARDE:
+toggle()                  (metodo)
+classlist.                (metodo)
+Aplicações do < i >       (tag html)
+onclick                   (metodo)

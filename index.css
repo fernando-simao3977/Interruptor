@@ -9,6 +9,8 @@ PALETA DE CORES:
 
     --noite1: #142039;
     --noite2: #29293c;
+    --noite3: #2f5c94;
+    --noite4:
 
 
 
@@ -27,17 +29,28 @@ body {
     justify-content: center;
     align-items:center;
     min-height: 100vh;
-    /*transition: 0.5s;*/
-    background-color: #29293c;
+    transition: 0.5s;
+    background-color: #2b2b2b;
 
 
+}
+/*active ataca novamente! e.e*/
+body.active {
+    background: #f8f8f8
+}
+
+#toggle.active {
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+                inset 0 2px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.05);
 }
 
 div {
     position:relative;
     width: 40%;
     aspect-ratio: 2/1;
-    background-color: #142039;
+    background-color: #222;
     border-radius: calc(20vw);
     /*border-radius deve ser igual a altura*/
     /* a border radius tem uma valor maximo (；ﾟ Дﾟ)*/
@@ -47,11 +60,33 @@ div {
                 inset 0 -4px 4px rgba(0,0,0,0.1);
                 /*Dessa eu não sabia XD
                 O inset coloca a sombra pra dentro*/
+    cursor: pointer;
 }
 
-#interruptor .indicator {
-    aspect-ratio: 1/1;
+#toggle .indicator {
+    position:absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1/1; /*Por algum motivo só funciona com 
+                  Position absolute*/
     height: 100%;
-    background-color: red;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+                inset 0 4px 4px rgba(255,255,255,0.2),
+                inset 0 -4px 4px rgba(255,255,255,0.2);
+    transition: 0.5s;
 
+}
+
+/*active????*/
+
+#toggle.active .indicator {
+    left: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1),
+                inset 0 4px 4px rgba(255,255,255,1),
+                inset 0 -4px 4px rgba(255,255,255,1);
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+transition: 0.5s;
 }
